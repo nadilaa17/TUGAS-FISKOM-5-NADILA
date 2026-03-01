@@ -5,15 +5,11 @@ import plotly.express as px
 # 1. Konfigurasi Halaman
 st.set_page_config(page_title="Dashboard Analisis Siswa", layout="wide")
 
-# 2. Sidebar Navigasi
-st.sidebar.title("Navigasi")
-menu = st.sidebar.selectbox("Pilih Menu", ["Tabel Data", "Visualisasi Analisis", "Statistik Deskriptif"])
-
-# 3. Judul Utama
+# 2. Judul Utama
 st.title("📊 Dashboard Analisis Data Siswa")
 st.write("Visualisasi dan Analisis Data 50 Siswa - 20 Soal")
 
-# 4. Upload File
+# 3. Upload File
 uploaded_file = st.file_uploader("Upload file Excel", type=["xlsx"])
 
 if uploaded_file:
@@ -46,6 +42,7 @@ if uploaded_file:
 
 else:
     st.info("Silakan unggah file Excel (.xlsx) terlebih dahulu untuk melihat analisis.")
+
 
 
 
